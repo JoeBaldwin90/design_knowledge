@@ -1,3 +1,14 @@
+/* Import fonts */
+@font-face {
+  font-family: "Bluu Next";
+  src: url('/assets/bluunext.woff2') format('woff');
+}
+
+@font-face {
+  font-family: "Bluu Next";
+  src: url('/assets/bluunext.woff') format('woff');
+}
+
 /* ----- Reset ----- */
 html {
   box-sizing: border-box;
@@ -25,6 +36,38 @@ img {
 /* ----- ----- ----- */
 
 body {
-  background-color: #333;
-  color: #eee;
+  font-family: "Bluu Next", sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+
+  background-color: #cfffaf;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  color: #111;
+
+  height: 100vh;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h1, p {
+  width: 460px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  text-align: center;
+  padding: 2rem;
 }
