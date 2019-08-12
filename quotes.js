@@ -22,8 +22,15 @@ const getQuote = function() {
     const randomQuote = data[randomNumber]
 
     // Populate quote and author elements
-    quoteTag.innerHTML = "&ldquo;" + randomQuote.quote.substring(0, 200) + "&rdquo;"
+    quoteTag.innerHTML = "&ldquo;" + randomQuote.quote + "&rdquo;"
     authorTag.innerHTML = "&#126; " + randomQuote.author
+
+    // Reduce font size if quote length is over 100 chars.
+    if (randomQuote.quote.length > 100) {
+      quoteTag.classList.add("long")    // Add class "long"
+    } else {
+      quoteTag.classList.remove("long") // Remove class "long"
+    }
   }
 }
 
