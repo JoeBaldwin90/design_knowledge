@@ -22,8 +22,8 @@ const getQuote = function() {
     const randomQuote = data[randomNumber]
 
     // Populate quote and author elements
-    quoteTag.innerHTML = randomQuote.quote
-    authorTag.innerHTML = randomQuote.author
+    quoteTag.innerHTML = "&ldquo;" + randomQuote.quote.substring(0, 200) + "&rdquo;"
+    authorTag.innerHTML = "&#126; " + randomQuote.author
   }
 }
 
