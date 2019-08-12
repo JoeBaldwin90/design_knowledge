@@ -1,7 +1,8 @@
 // Elements
-const quoteTag = document.querySelector("h1") // Quote copy
-const authorTag = document.querySelector("p") // Quote author
+const quoteTag = document.querySelector("h1")          // Quote copy
+const authorTag = document.querySelector("p")          // Quote author
 const randomTag = document.querySelector("footer img") // Random button
+const bodyTag = document.querySelector("body")
 
 let data = []
 
@@ -31,6 +32,9 @@ const getQuote = function() {
     } else {
       quoteTag.classList.remove("long") // Remove class "long"
     }
+
+    // Change background style each time based on random HSL colours
+    bodyTag.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 90%)`
   }
 }
 
